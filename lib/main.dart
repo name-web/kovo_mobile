@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'features/users/presentation/pages/profile_page.dart';
+import 'features/auth/presentation/pages/login_page.dart';
 
 void main() {
   runApp(
@@ -19,7 +19,7 @@ class KovoApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Kovo',
-      home: const ProfilePage(),
+      home: const LoginPage(),
     );
   }
 }
