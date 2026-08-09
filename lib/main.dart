@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'features/auth/presentation/pages/login_page.dart';
+import 'features/splash/presentation/pages/splash_page.dart';
 
 void main() {
   runApp(
@@ -19,7 +19,18 @@ class KovoApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Kovo',
-      home: const LoginPage(),
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: const Color(0xFFFFC80A),
+        scaffoldBackgroundColor: const Color(0xFF05080E),
+        colorScheme: const ColorScheme.dark(
+          primary: Color(0xFFFFC80A),
+          surface: Color(0xFF10141D),
+          onPrimary: Colors.black,
+          onSurface: Colors.white,
+        ),
+      ),
+      home: const SplashPage(),
     );
   }
 }
