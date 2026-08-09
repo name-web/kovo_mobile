@@ -1,6 +1,6 @@
 import '../../domain/entities/user.dart';
 import '../../domain/repositories/user_repository.dart';
-import '../../data/models/user_model.dart';
+import '../models/user_model.dart';
 import '../../../../core/network/api_client.dart';
 
 class UserRepositoryImpl implements UserRepository {
