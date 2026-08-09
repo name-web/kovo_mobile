@@ -1,3 +1,5 @@
+import '../../domain/entities/user.dart';
+
 class UserModel {
   final String id;
   final String name;
@@ -31,5 +33,15 @@ class UserModel {
       'createdAt': createdAt.toIso8601String(),
       'updatedAt': updatedAt.toIso8601String(),
     };
+  }
+
+  User toEntity() {
+    return User(
+      id: id,
+      name: name,
+      email: email,
+      createdAt: createdAt,
+      updatedAt: updatedAt,
+    );
   }
 }
