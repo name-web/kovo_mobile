@@ -5,16 +5,15 @@ import '../storage/token_storage.dart';
 
 class ApiClient {
   final Dio _dio;
+  final TokenStorage _tokenStorage;
 
   ApiClient({
     Dio? dio,
     TokenStorage? tokenStorage,
-  }) : _dio = dio ?? Dio(),
-       _tokenStorage = tokenStorage ?? const TokenStorage() {
+  })  : _dio = dio ?? Dio(),
+        _tokenStorage = tokenStorage ?? const TokenStorage() {
     _configure();
   }
-
-  final TokenStorage _tokenStorage;
 
   void _configure() {
     _dio.options = BaseOptions(
